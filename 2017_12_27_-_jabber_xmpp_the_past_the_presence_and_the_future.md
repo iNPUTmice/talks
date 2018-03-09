@@ -62,7 +62,7 @@ But don’t get all excited about gateways. XMPP has had transports 15 years ago
 
 That’s why multi protocol messenger like Pidgin or Trillian usually suck. That’s why concept’s like telephaty never really took of.
 
-Transports work fine for very limited protocols like IRC where your own protocol is a superset of the protocol you are trying to create a gateway to. XMPP and Matrix both of working IRC gateways. But that’s it. It won’t work for protocols more complex than that. And by the way it will break end-to-end encryption.
+Transports work fine for very limited protocols like IRC where your own protocol is a superset of the protocol you are trying to create a gateway to. XMPP and Matrix both have working IRC gateways. But that’s it. It won’t work for protocols more complex than that. And by the way it will break end-to-end encryption.
 
 ---
 
@@ -75,7 +75,7 @@ Transports work fine for very limited protocols like IRC where your own protocol
 
 <p><small>¹ When using a modern client and server</small></p>
 
-Note: In case you haven’t used XMPP in recent years let me summarize the years leading up to 2016 very briefly with a simple: Jabber nowadays has every feature you would expect from a modern messaging app. It is reliable. Messages don’t get lost if you loose connectivity for while. It synchroize across different devices; you can transfer images and other media files. It has support for group chats. And it has support for End-to-end encryption.
+Note: In case you haven’t used XMPP in recent years let me summarize the years leading up to 2016 very briefly with a simple: Jabber nowadays has every feature you would expect from a modern messaging app. It is reliable. Messages don’t get lost if you lose connectivity for while. It synchroize across different devices; you can transfer images and other media files. It has support for group chats. And it has support for End-to-end encryption.
 
 I say all that with the small foot note that you have to use an up to date client; You can’t use a multi protocol messenger that hasn’t been updated in years and expect those features to work.
 
@@ -100,7 +100,7 @@ OMEMO is an encryption that works similiar to the one found in WhatsApp, Signal 
 
 PGP on the other hand doesn’t have that and might be »less secure« but it just as well keeps the snooping sys admin of your Jabber server from reading your messages while still allowing you to have full access to your entire history when setting up a new device.
 
-And of course there is the choice of not encrypting messages at all. When I talk to my dad on Jabber and we both use the same Jabber server that is running on a Rasberry Pie in my living room there is absolutetly no reason what so ever to encrypt my messages and I much rather utilize tools like server side search.
+And of course there is the choice of not encrypting messages at all. When I talk to my dad on Jabber and we both use the same Jabber server that is running on a Rasberry Pi in my living room there is absolutetly no reason what so ever to encrypt my messages and I much rather utilize tools like server side search.
 
 ---
 
@@ -123,7 +123,7 @@ TLS by now has learned to do that by itself with an extension of its own called 
 
 The primary benefits of using what is called »Direct TLS« is that it makes connection a bit faster by saving you the intial round trip. More importantly though does it allow you to run your XMPP server on port 443 with TLS encryption making the traffic difficult to be distinguished from HTTPS traffic which increases your chances to connect from Airport hotspots and Hotel Wifis.
 
-Some of the XMPP servers don’t actually support SNI though yet. So if you want to run multiple domains on the same IP address you need to put an SSL multiplexer in front of your XMPP server that listens on port 443 and redirects the traffic to different ports on your XMPP server - one for each domain name.
+Some XMPP servers don’t actually support SNI yet, though. So if you want to run multiple domains on the same IP address you need to put an SSL multiplexer in front of your XMPP server that listens on port 443 and redirects the traffic to different ports on your XMPP server - one for each domain name.
 
 ---
 
@@ -135,7 +135,7 @@ Some of the XMPP servers don’t actually support SNI though yet. So if you want
 
 Note: Push is actually a feature that found it’s way into the clients in 2016 and I already wrote about that in my [The State of Mobile XMPP in 2016](https://gultsch.de/xmpp_2016.html) article but 2017 was the year in which we got server support for it and saw adoption in the wild.
 
-Push is currently only needed on iOS which can not maintain a persistent TCP connection to the server. Push needs server support and it can trigger a push notification when something happens. Servers can’t issue a push notification directly only the app developer can. So the server tells the app developer which then sends a push notification. Both the app developer and the push network (Apple or Google) only see that something happen. They don’t see the content of the message or who send the message. Technically it doesn’t even mean it was a message.
+Push is currently only needed on iOS which can not maintain a persistent TCP connection to the server. Push needs server support and it can trigger a push notification when something happens. Servers can’t issue a push notification directly only the app developer can. So the server tells the app developer which then sends a push notification. Both the app developer and the push network (Apple or Google) only see that something happen. They don’t see the content of the message or who sent the message. Technically it doesn’t even mean it was a message.
 
 Maybe at some point this will also be required on Android so it’s good to gain some experience with the technology and already have server side support.
 
@@ -146,7 +146,7 @@ Maybe at some point this will also be required on Android so it’s good to gain
 * small changes to XEP
 * *Read to this point* UI
 
-Note: Conversations has had chat markers in 1:1 chats for a while now. Chat markers signal the other party that the contact has read up to a certain point in a conversation but can also be used to remove a pending notification on one device if the messages have been read on another device.
+Note: Conversations has had chat markers in 1:1 chats for a while now. Chat markers signal to the other party that the contact has read up to a certain point in a conversation but can also be used to remove a pending notification on one device if the messages have been read on another device.
 
 About a month ago I also implemented this for group chats. The »has read up to this point« UI has the benefit over the »blue checkmark« logic found in WhatsApp that you can also see if people in a group chat have read other messages. In WhatsApp this only works for messages you have sent yourself.
 
@@ -154,7 +154,7 @@ I just made a small change compared to the already existing XEP to make it work 
 
 I still have to write that change down though and get it accepted into the official XEP.
 
-While I’m at it I also want to change another detail of the XEP. Right now chat markers are only send out if the sender of the original message has requested them. This poses a problem in group chats: While the original sender might not have interest in getting read markers other participants in that group chat might. The same problem occurs when I want to use chat markers to dismiss notifications on other devices. This currently only works if the sender has requested them. So my proposal is to change the XEP to send out read markers opportunisticly all the time.
+While I’m at it I also want to change another detail of the XEP. Right now chat markers are only sent out if the sender of the original message has requested them. This poses a problem in group chats: While the original sender might not have interest in getting read markers other participants in that group chat might. The same problem occurs when I want to use chat markers to dismiss notifications on other devices. This currently only works if the sender has requested them. So my proposal is to change the XEP to send out read markers opportunistically, all the time.
 
 ---
 
@@ -163,7 +163,7 @@ While I’m at it I also want to change another detail of the XEP. Right now cha
 * Italic, bold, strikethrough & monospace
 * Inspired by WhatsApp & Slack
 
-Note: Another small feature introduced this year into Conversations and written down as a XEP and that’s the ability to use text styling like italic, bold, strikethrough and monospace. It was heavily influenced by WhatsApp and Slack and uses the same syntax. Star for bold, underline for italic, the tilde (~) for strikethrough and backticks (`) for monespace.
+Note: Another small feature was introduced this year into Conversations and written down as a XEP and that’s the ability to use text styling like *italic*, **bold**, ~~strikethrough~~ and `monospace`. It was heavily influenced by WhatsApp and Slack and uses the same syntax. Star for bold, underline for italic, the tilde (~) for strikethrough and backticks (`) for monespace.
 
 Interestingly WhatsApp and Slack do not have the same parsing rules when it comes to nesting or other details. We tried to find a good middleground between an easy ruleset - as in easy to implement - that doesn’t have too many false positves. Theoretically other instant messaging system could implement the same ruleset to make transports work a little better.
 
@@ -173,7 +173,7 @@ Interestingly WhatsApp and Slack do not have the same parsing rules when it come
 * Two »competing« standards
 * One simple solution
 
-Note: Avatars are unfortunatly one of those areas where there are two solutions to the same problem. However resolving that issue is surprisingly easy.
+Note: Avatars are unfortunatly one of those areas where there are two solutions to the same problem. However, resolving that issue is surprisingly easy.
 
 Let me describe the two standards first.
 
@@ -220,12 +220,12 @@ Note: Now let’s take a look into what’s coming in the near future.
 * World readable keys
 * Deployment
 
-Note: It has been a long term goal of mine to make OMEMO the default encryption in Conversations. However this isn’t as simple as flipping a switch. There are a couple of things that needed to be fixed in order to actually make this viable.
+Note: It has been a long-term goal of mine to make OMEMO the default encryption in Conversations. However this isn’t as simple as flipping a switch. There are a couple of things that needed to be fixed in order to actually make this viable.
 The first thing was that we needed to introduce an easier trust model. OMEMO when it first was implemented would keep asking the user to confirm the fingerprint for every new device. That’s too complicated for inexperienced users.
 
 The second problem we had was that OMEMO was only working with people in your contact list. Which not only makes this difficult in group chats but also prevents the first »Hello« message that happens before people add each other to their contact list.
 
-And most importantly OMEMO needed to see some adoption. You can’t make an encryption default that is not support by the recipient.
+And most importantly, OMEMO needed to see some adoption. You can’t make an encryption default that is not support by the recipient.
 
 Let’s look at all these problem in more detail.
 
@@ -321,7 +321,7 @@ It can be quite annoying for server operators though because they have to handle
 
 From a user perspective the only recommendation is to be careful about where you publish your Jabber ID and if you do use the same obfuscation you use with your email address. Even though I personally don’t have any evidence that the spammers are actually crawling the internet for Jabber IDs. It seems that there are getting their addresses from hacked forums and something like that.
 
-If you want to read a server admins perspective and how you can filter spam on the server side go read the blog post from the yax.im admin.
+If you want to read a server admins perspective and how you can filter spam on the server side, go read [the blog post by the yax.im admin](https://yaxim.org/blog/2017/12/22/spam-reduction-on-yax-dot-im/).
 
 ---
 
