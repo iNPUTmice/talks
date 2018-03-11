@@ -135,6 +135,8 @@ Note: Ich kenne keine Software die von Spenden alleine tatsächlich überleben k
 10% von dem was ich über PlayStore verkäufe verdiene.
 Vielleicht wäre das höher wenn die software kostenlos wäre; wer weiß. Meine Samplesize ist da leider eins.
 
+Spenden eigentlich mehr wie Trinkgeld. Was nicht heißt das man sich da nicht drüber freut. Gerade bei dem etwas höheren Spenden denkt man dann schon mal "Krass. Ich hätte nicht gedacht das einem das so viel wert ist"
+
 PayPal sicher das bequemste für Benutzer. Am Besten (zumindest für Europa) sind jedoch Banküberweisungen. Ich will aber meine private IBAN nicht einfach so ins Internet stellen deshalb müssen mich leute vorher anschreiben. Wäre vielleicht höher wenn dieser Schritt weg wäre.
 
 Bitcoin und Co kommt tatsächlich ab und zu was rein. Ich bin dazu übergegangen direkt die Einzahladdresse von bitcoin.de (also dem bitcoin exchange) zu veröffentlichen statt meiner privaten Wallet (spart transaktion gebühren)
@@ -212,7 +214,15 @@ Und die erwartungshaltung von Usern wächst natürlich so mehr Leute da mit mach
 3. …
 4. Profit
 
-Note: Nach
+Note: Nach 'Crowdfunding' ist 'biete doch einfach Support oder Hosting' die Lösung die am häufigsten von Außen vorgeschlagen wird. Dabei fällt das auch in die klassische einfacher gesagt als gemacht Kategorie. 
+Denn was hier gesagt wird ist im Grunde; Gründe doch einfach ein Unternehmen was so erfolgreich ist das man von den dem Gewinn die Entwicklung der Software bezahlen kann. 
+
+Also um das mal an einem Bespiel zu verdeutlichen: Nehmen wir mal ich würde 10 Stunden support verkaufen; Dann wäre ich ja 10 Stunden damit beschäftigt Support zu leisten und hätte immer noch keine bezahlte Zeit für die Software entwicklung. Ich muss also entweder mehr Support verkaufen als der Kunde in Anspruch nimmt. Oder mehr geld verlangen. Also Stellen wir uns mal vor ich würde 10% mehr Geld für den Support verlangen als normalerweise üblich. Dann bräuchte ich 10 Vollzeitstellen Support um eine Vollzeitstelle Entwicklung zu finanzieren.
+Sprich für den einzelenen Entwickler der einfach nur an seiner Software arbeiten möchte ist das nicht machbar.
+
+Ähnlich Problematisch ist das ganze mit Hosting; Hier ist man dann damit beschäftigt Abrechnungssysteme und andere Automatisierung zu bauen und allgemein die Server am laufen zu halten. Sprich man hat wieder keine zum Coden.
+
+Tatsächlich versuche ich mich gerade daran ein bisschen damit einen Hosting Service aufzubauen. Nicht unbeding mit dem Ziel Conversations querzufinanzieren - lieber würde ich die Serverentwicklung querfinanzieren - und der Anbieter läuft auch eigentlich ganz gut. Aber bisher 'nur' gut genug um sich selber am Laufen zu halten. Genug Gewinn um irgendwas quer zu finanzieren haben wir noch nicht.
 
 ---
 
@@ -222,11 +232,32 @@ Note: Nach
 * Verpflichtung Features zu behalten
 * Sehr lukrativ
 
+Note: Auftragsarbeit - also Erweiterungen an Conversations - die von irgendwem bezahlt werden ist tatsächlich das was für mich am Besten funktioniert.
+Da müsste man dann eigentlich nochmal unterscheiden zwischen Features die geeignet sind in Mainline aufgenommen zu werden.
+Features die in Mainline aufgenommen werden ist natürlich das Ideale weil dann alle davon profitieren.
+Features die quasi nur für den einen Kunden gebaut werden sind im Grunde auch nur wieder eine Art der Querfinanzierung. Wenn auch eine die ggf weniger Overhead hat als zB 'Support' oder 'Hosting' anzubieten.
+
+Um das Mal an einem Bespiel deutlich zu machen; Wenn mich jemand dafür bezahlt ein Anderes Logo darauf zu machen damit Conversations innerhalb einer Firma benutzt werden kann dann profitiert Mainline da natürlich nicht von.
+Anderes Bespiel: Selbstzerstörende Nachrichten.
+
+Mainline Features haben in der Anfangsphase besser geklappt als Conversations noch nicht 'Feature complete' war.
+
+In der Anfangsphase habe ich mich ein paar mal dabei ertappt das ich gewisse features extra für eine Zeit zurück gehalten haben weil ich wusste das eventuell jemand dafür bezahlen wird. Was für die User eigentlich nicht so ideal ist.
+
+Ein Anderes Problem ist ggf das wenn Features bezahlt wurden man sich ggf schwer tut die wieder abzuschaffen wenn sie sich als ineffizient heraus gestellt haben oder veralten.
+
 ---
 
 ## Dual Licensing
 * Contributor License Agreement
 * Klage bei Verstößen
+
+Note: Dual Licensing. Sprich das Program unter GPL oder einer anderen relativ restrictiven Lizenz veröffentlichen und dann Lizenzen an Leute verkaufen die die GPL nicht nutzen wollen.
+Braucht ein Contributor License Agreement wo contributors einwilligen das du das darfst. Interessanter weise einer der Punkte wo mich vor vier Jahren schon mal jemand gewarnt hat und gesagt hat das ich das brauche. Was ich dann natürlich ignoriert habe. Und das im Nachhinein zu machen ist erheblicher Aufwand.
+
+Und es heißt natürlich das man im Zweifellsfalle Leute tatsächlich verklagen muss die gegen die GPL verstoßen. Leute die sehr wahrscheinlich im Ausland sitzen.
+
+Fazit für mich: Alles 3 clause BSD. Ich hab weder geld noch zeit noch lust irgendwen zu verklagen.
 
 ---
 
