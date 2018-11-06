@@ -27,9 +27,16 @@ Ich erwähne das mit dem Studium nur weil ich mit Conversations angefangen habe 
 * 25k Verkäufe
 * Tooling: Compliance Tester, Uptime Monitor
 
+Note: Kurz ein paar Worte zu Conversations. Conversations ist eine Instant Messaging App für Android und eine Alternative zu WhatsApp, Signal, Telegram und so weiter. Der unique selling point ist das Conversations im Gegensatz zu den erwähnten Apps Anbieterunabhängig ist. Ich kann mir als Nutzer also aussuchen wer den Server betreiben soll und trotzdem noch mit Leuten chatten die auf anderen Servern sind. Im Grunde wie bei email. Nutzer werden auch über `user@domain` identifiziert. Serveranbieter können dabei zum Beispiel die Uni oder der Verein sein. Natürlich kann man auch, wenn man das möchte, seinen eigenen Server betreiben.
+Unter der Haube nutzt Conversations Jabber bzw XMPP. Dieses standardisierte Protokoll wird auch von zahllosen anderen Clients für andere Platformen unterstützt die dann alle mit einander kompatibel sind.
+Bis heute wurde Conversations über 25.000 mal im Google Play Store verkauft.
+In so einer Anbieterunabhängigen Welt steht Conversations natürlich nicht alleine da sondern braucht andere Programme die gut damit zusammen arbeiten. Deswegen entwickle ich nicht nur Conversations sondern auch andere Tools für dieses Ökosystem. Zum Beispiel gibt es den Compliance Tester mit dem testen kann ob ein Server richtig bzw vollständig konfiguriert wurde.
+
 ---
 
 <img style="height: 500px; border: 0px;" src="images/clt18/conversations.png"/>
+
+Note: Und weil ein Bild mehr sagt als 1000 Worte hier ein Screenshot von Conversations. Optisch und von der Benutzung her unterscheidet sich Conversations nicht grundsätzlich von anderen Messengern. Bilder, Sprachnachrichten, Gruppenchats, Ende-zu-Ende verschlüsselung funktioniert alles. 
 
 ---
 
@@ -67,13 +74,13 @@ Note: Ich erzähle immer so gerne das ich in Vollzeit an einem Open Source Proje
 * Code schreiben
 * Code Review / Pull requests
 
-Note: Die eigentliche Softwareentwicklung nimmt sicherlich einen Großteil der Zeit in Anspruch, ist allerdings bei Weitem nicht die einzige Aufageb.
+Note: Die eigentliche Softwareentwicklung nimmt sicherlich einen Großteil der Zeit in Anspruch, ist allerdings bei Weitem nicht die einzige Aufgabe.
 
 Was häufig Unterschätzt wird - oder was ich zumindest unterschätzt habe bevor ich es selber machen musste - ist die Zeit die man mit Pull requests beziehungsweise code review verbringt.
 Eigentlich sollen Pull Requests (also Contributions von Dritten) einem ja Arbeit abnehmen.
 Jetzt müssen pull requests allerdings von der Qualität her so gut sein, dass ich hinterher die Verantwortung für diesen Code übernehmen kann. Ich muss selber in der Lage sein den Code in Zukunft zu maintainen, da ich ja von externen Contributors nicht verlangen, dass sie sich in Zukunft selber um den Code kümmern. In der Praxis ist dann also zuminedst der erste Pull Request für mich signifikant mehr Arbeit als wenn ich es einfach selber machen würde. Pull Requests sind also immer eine Art Investition in die Zukunft. Wenn ich mich gut um den PR kümmere kommt der Contributor vielleicht später wieder und macht einen PR um den ich mich nicht mehr so stark kümmernm muss.
 
-Das tut mir dann immer auch ein bisschen Leid aber mit einem Pull Request der wirklich total zusammengerfickelt ist wo ich gar nicht weiß wo ich mit dem Review anfangen soll wird von mir wahrscheinlich eher weniger Aufmerksamkeit bekommen. Ausnahmen (im Rahmen von Google Summer of Code) zum Beispiel bestätigen die Regel.
+Das tut mir dann immer auch ein bisschen Leid, aber ein Pull Request der wirklich total zusammengerfickelt ist, und wo ich gar nicht weiß wo ich mit dem Review anfangen soll wird, wird von mir wahrscheinlich eher weniger Aufmerksamkeit bekommen. Ausnahmen, im Rahmen von Google Summer of Code, zum Beispiel bestätigen die Regel.
 
 ---
 
