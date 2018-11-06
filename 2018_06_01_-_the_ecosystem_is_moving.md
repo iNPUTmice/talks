@@ -15,7 +15,7 @@ theme: league
 
 #### Provider independence
 
-* Users can talk to each other across domains
+* Users can talk to each other across providers
 * Identified by: user@domain.tld
 * Possible Providers:
  * University
@@ -39,12 +39,23 @@ theme: league
 * Requirments shift over time
 * Exensible protocol but clients do not always catch up
 
+----
+
+#### Difficulty of Choice
+
+* Latest features
+* Reliable
+* Trustworthy
+
+<small><a href="https://conversations.im/compliance/">Compliance Tester</a>, <a href="https://status.conversations.im/historical/">Status Monitor</a>, <a href="https://www.digitalesecho.de/xmpp-servercheck-2016/">Digitales Echo Server check</a></small>
+
 ---
 
 ### A quick history of Conversations
 
 * Android client. Copy of Google Hangouts
-* Started in January 2014, First release in March 2014
+* Started in January 2014
+* First release in March 2014
 * 2.0 in March 2018
 
 ---
@@ -77,10 +88,10 @@ theme: league
 #### /me command
 
 ```
-    * UserA a is now online
+     * UserA a is now online
 UserA: Hi
 UserB: Hi
-    * UserA is hungry    
+     * UserA is hungry    
 ```
 
 ----
