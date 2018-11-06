@@ -56,6 +56,8 @@ Note: Es wird zu selten über das Thema geredet. Wir haben diese Vorstellung das
 
 Ich kennen noch 1-2 andere Menschen die als Einzelperson (also nicht in einem Unternehmen) an einem Open Source Projekt arbeiten und damit ihr Geld verdienen. Die haben aber auch nie öffentlich darüber geredet wie genau sie das machen.
 
+Aber ich finde sowas mega spannend weil sich dadurch die Qualität von kleineren Open Source Projekten deutlich verbessern kann und man eventuell auch Software für Nischen machen kann für die es sich sonst nicht lohnen würde Software zu machen.
+
 Auch wenn meine eigene Erfahrung noch stark limitiert ist möchte ich sie denoch weiter geben damit eventuell andere Menschen davon profitieren können.
 
 Und wenn Ihr mit irgendetwas, das ich in diesem Vortrag negativ darstellen werde tatsächlich selber positive Erfahrungen gemacht habe würde ich mich freuen davon zu hören.
@@ -107,6 +109,8 @@ Note: Wenn Ihr Open Source software Entwickelt - und vor allem wenn Ihr von der 
 Das heißt ihr müsst auf Konferenzen gehen und euer Projekt vorstellen. Idealer weise wollt ihr auch das die Medien über euch berichten. Dafür habe ich aber selber immer noch nicht den Trick heraus gefunden. 'Pressemittelungen' an verschiedene Newsredaktionen von mir wurden bisher immer ignoriert.
 Den einzigen Artikel über OMEMO, was die Verschlüsselungstechnology in Conversations ist, musste ich mir selber schreiben und wurde auch nur veröffentlicht weil ein freier Mitarbeiter den ich von Konferenzen kenne ein gutes Wort bei einem der Redaukteure eingelegt hat.
 Will heißen Aufmerksamkeit durch die Medien zu bekommen ist nicht einfach und funktioniert meiner Erfahrung nach nur wenn man zufällig die richtigen Leute kennt.
+
+Konferenzen sind meiner Erfahrung nach eine super Gelegenheit; aber es kostet natürlich Geld da hin zu fahren; zu übernachten und so weiter. Und natürlich auch Zeit den Vortrag vorzubereiten.
 
 Social Media kann ein gutes Werkzeug sein ist aber auch mit viel Arbeit verbunden. Einfach nur Dinge auf einem Account ohne Follower zu posten bringt natürlich nichts. Also muss man entweder selber Follower sammeln oder Follower haben die selber viele Follower haben und interessant finden was du postest und dich dann weiter verbreiten. Für beides muss man in den Social Medien einigermaßen aktiv sein. Es genug also nicht ab und zu mal seine 'Pressemittelung' zu veröffentlichen man muss auch zwischendurch aktiv sein und 'interessante Diskussionen' führen die für mehr Aufmerksamkeit und mehr Follower sorgen.
 
