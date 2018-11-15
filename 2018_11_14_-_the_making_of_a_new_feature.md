@@ -37,6 +37,14 @@ theme: league
 
 ## Ok. But Why?
 
+Note: There is that joke if you ask four XMPP users about the *one* thing thats prevents XMPP from being more popular you get five different answers.
+
+* To some it’s the lack of audio/video calls;
+* To some it’s the lack of end-to-encryption by default; to others it’s the very fact that we now do end-to-end encryption
+* To some it’s the 'complicated' onboarding and contact discovery.
+* To me personally it’s the lack of proper iOS and to some degree the lack of desktop clients. I think converse.js can probably fill some of the gaps and it is developing rapidly right now; But it aint there yet. Especially for 'hosted' mode; where you just go to the converse.js website and log in it really needs alternative connection discover so your xmpp connection isn’t routed over JC’s proxy. And a few other things like read markers. 
+However I can’t do anything about most of those. So I tried making the one thing I can do; make onboarding easier. Either it will be succesful and that’s great or we can cross it of the list of things that stand between us and XMPP being succesful.
+
 ---
 
 ### Top Five reasons for Quicksy
@@ -45,6 +53,16 @@ theme: league
 * Not cannibalizing on Conversations and c.im revenue
 * Gateway drug to Conversations
 * Business model
+
+Note: So what exactly is so great about Quicksy and how is it different from other networks and previous attempts to build something like that on Jabber.
+
+Quicksy lowers the barrier of entry to something that is comparable to WhatsApp and Signal. However due to the fact that it can discover users that are not on the Quicksy Server and the fact that phone numbers are not obfuscated it integrates nicely into Jabber. So for users who are already on Jabber and like to self host and enjoy the freedom of Jabber nothing changes.
+
+It allows me to make the app free without loosing out on Conversations revenue.
+
+Other than the onboarding the app looks and behaves exactly like Conversations. So users who start with Quicksy can easily migrate to Conversations later.
+
+And it has at least some kind of business model which can ensure that it exists for some time. So what’s the business model you ask?
 
 ---
 
@@ -105,7 +123,6 @@ theme: league
  - communicate system languge to SMS provider
  - communicate retry interval
  - conflict when still logged in
- -  …
 
 ---
 
@@ -153,3 +170,123 @@ theme: league
 <!--no changes determined by hash in ver='' attribute -->
 <iq type="result" from="api.quicksy.im" />
 ```
+
+Note: Maybe just upload the diff; mostly a client side feature
+
+---
+
+## To roster or not to roster
+
+---
+
+### Benefits of not using roster
+
+* Less meta data
+* Easier sync; delete from phone book and contact is gone
+* Avoid the rabbit hole of mutual presence subscription
+* Unnecessary to a certain degree
+
+---
+
+### But it is not complete unnecessary…
+
+* Avatar, OMEMO
+* 'Trusted' (automatically accept file transfers, send read markers)
+
+---
+
+### Or is it?
+
+* Trust can be mapped to 'is in Android Address book'
+* PEP nodes can be made public and subscribed to
+* **BUT:** reliably (un)subscribe to *people I’m in conversation with* is hard
+ - Open / closed can happen when offline
+ - No way to get current subscriptions
+ - Multi clients a mess
+
+---
+
+### The Inbox XEP™
+* Synchronize list of open conversations
+* May or may not cover group chats
+
+Note: What I’m going to explain now hasn’t been implemented yet. 
+
+---
+
+### The ~~Inbox~~ open conversations on steroids XEP™
+* Server will automatically
+ - subscribe your full jid to the PEP nodes of the entities in your open conversations list
+ - unsubscribe you when your full jid goes offline
+* Based on the nodes you are interested in (caps hash)
+* Minus contacts with mutual presence sub
+
+---
+
+### Open Questions regarding the »List of open conversations on steroids XEP™«
+* Requires server support
+ - Yeah, but everything does, get over it
+ - Only on the user’s server
+* How to deal with MUC members?
+ - Invisible entries?
+ - Not at all? MIX to the rescue
+
+---
+
+### The Quick(sy) solution
+* Ask for presence subs when sending the first message
+* At least we have not all meta (full android address book) data on the server
+* Receiver gets the 'add back' snackbar
+
+---
+
+## FAQ
+
+---
+
+### Why not hash the phone numbers?
+
+* Hashes don’t work; limited number of valid phone numbers
+* Makes adding a Quicksy user hard
+
+---
+
+### Why not maintain a public list of phone numbers?
+
+* Users don’t want the look up to be reversible
+* Hashes don’t work
+* A central entity needs to do the SMS verification
+
+---
+
+### Why not make it publicly searchable?
+
+* Only Quicksy users can discover contacts
+* We don’t want anyone to scrape the entire list
+* Verified Quicksy users can be rate limited
+
+---
+
+### Why isn’t entering your phone number free
+
+* Because SMS verification is surprisingly expensive
+* Cross financing the server
+
+---
+
+### Is it open source?
+
+* The client is open source (obviously)
+* The server is not
+ - Conversations suffers from frequent GPL violations
+ - Having access to the Quicksy server is the missing piece they need
+ - Potential revenue stream (sustainability) from selling the Quicksy Server
+ - Didn’t work with the Conversations App Server
+
+---
+
+## Questions?
+
+https://quicksy.im
+
+`Datengarten`
