@@ -22,21 +22,21 @@ After that I want to talk very briefly about some commercial users of XMPP. Thin
 
 Then we will go over a bunch of clients that are currently in active development. 
 
-Last but not least I want to share some observations I made. Not as a direct resumee from my talk but more general things I noticed in the past while working on XMPP.
+Last but not least I want to share some observations I made. Not as a direct summary from my talk but more general things I noticed in the past while working on XMPP.
 
 ---
 
 ## ‘Open Source’ Community
 
-Note: I wasn’t quite sure how to call the group of people I want to talk about. In previous talks I talked about Jabber as the network of publicly federating servers as opposed XMPP the protocol which can be used in all sort of contextes. But I don’t like that word very much anymore. Partially because Cisco owns the trademark on that word.
-non commercial would be another term; but that isn’t a good fit either because there are commercially operated providers.
+Note: I wasn’t quite sure how to call the group of people I want to talk about. In previous talks I talked about Jabber as the network of publicly federating servers as opposed to XMPP the protocol which can be used in all sort of contexts. But I don’t like that word very much anymore. Partially because Cisco owns the trademark on that word.
+›non commercial‹ would be another term; but that isn’t a good fit either because there are commercially operated providers.
 Just note that when I say 'Open Source' community I'm refering to people like you and I who use XMPP on publicly federating servers; mostly with clients that are free software.
 
 ----
 
 ### Users
 
-Note: Let’s begin by asking ourself **who uses XMPP**? Obviously in a federated system we have no way of knowing who uses XMPP and that is a good thing. Most XMPP providers make a point in storing as little data as possible. And even if some public servers would publish that information we don’t account for the countless of personal and small-office servers that fly entirely under the rader.
+Note: Let’s begin by asking ourselves **who uses XMPP**? Obviously in a federated system we have no way of knowing who uses XMPP and that is a good thing. Most XMPP providers make a point in storing as little data as possible. And even if some public servers would publish that information we don’t account for the countless of personal and small-office servers that fly entirely under the rader.
 However if we knew that XMPP was over- or under represented in a certain country for example we could learn from that and repeat what we do in the succesful countries in the less succesful ones in an attempt to grow the community.
 
 ----
@@ -95,7 +95,7 @@ Note: The only publicity Quicksy has ever received was a the initial presentatio
 <small>Source: [@infosechandbook@mastodon.at](https://mastodon.at/@infosechandbook/102412870082664239)</small>
 
 Note: This data is highly problematic as well since they used just one (probably fairly biased list of servers) instead of for example getting it from open server-to-server connections. Also they looked at the A record not the SRV records. However if there is at least some truth to that data it also confirms what we saw in the previous slides. If a vast majority of XMPP users are from Germany it’s natural to assume that the use and operate servers in Germany.
-Interestingly they tried to spin those numbers into an argument into how XMPP isn’t really federated because all the servers are in the same place. However to me it just shows that users pick servers close to them.
+Interestingly they tried to spin those numbers into an argument as how XMPP isn’t really federated because all the servers are in the same place. However to me it just shows that users pick servers close to them.
 
 ----
 
@@ -120,7 +120,7 @@ So I manually went through the list of XMPP software on the xmpp.org website and
 * Thursday & Friday before FOSDEM Brussels
 * One large conference room (~50 people)
 
-Note: Main event where open source and non open source come together and discuss upcoming extensions and long term plans for the future of xmpp.
+Note: Main event where open source and non open source people come together and discuss upcoming extensions and long term plans for the future of xmpp.
 This year discussions included better message archiving like storing messages and meta information for that message (delivered, read) together) and also MIX as a successor to MUC as group chat protocol.
 
 Very intense two days.
@@ -129,7 +129,7 @@ Very intense two days.
 
 #### Sprints
 
-* 7+ Sprints since May 2018 (Cambridge, Dusseldorf, The Haugue, Lyon, …)
+* 7+ Sprints since May 2018 (Cambridge, Dusseldorf, The Hague, Lyon, …)
 * Independently organized
 * SCAM provides: How to + publicity
 
@@ -139,9 +139,9 @@ Note:
 * We try to avoid the term Hackerthon because that has been hijacked by the industry to mean something else
 * Usually over a week end
 * Developers meet to
- * learn from each other
- * rapid prototype new things that might need both server and client support
- * be social; people usually people arrive on the friday and go out for drinks
+ - learn from each other
+ - rapid prototype new things that might need both server and client support
+ - be social; people usually people arrive on the friday and go out for drinks
 * Early attempts at this date back to at least [2013](https://wiki.xmpp.org/web/Berlin_Hackfest)
 * Fairly regular for about a year now
 * Any one could organize one; but in the past a lot of them have been organized by one person (Thank you pep.!); but we also have a how-to on the wiki; and will give you the visibility and other assistence
@@ -173,7 +173,7 @@ Notes:
 
 Note:
 * Booth at FOSDEM (because that's right after the summit); Most 'official' one. Lots of merch (bottle openers, stickers) hoodies
-* In recent history we had villages at CCC events; however those resemble more sprints than a booth at a normal confernece; however you can stil come and talk to use and get stickers
+* In recent history we had villages at CCC events; however those resemble more sprints than a booth at a normal conference; however you can stil come and talk to use and get stickers
 * And of course we are here at FrOSCon. So come by tomorrow if you haven’t already
 
 ----
@@ -233,7 +233,7 @@ Generated from information on status.conversations.im - needs to have credential
 
 Note: One of the arguments you hear against XMPP is that there are too many extensions and as an implementor you don’t know what to implement and as a user you don’t know what client to download. And there is certainly some truth to that. We currently have more than 400 extensions.
 
-So for a while we had the so called compliance suites which are basically meant for developers to tell them 'implement these 10 extensions and everything will be fine'.
+So for a while we have had the so called compliance suites which are basically meant for developers to tell them 'implement these 10 extensions and everything will be fine'.
 There are also different profiles. For example a web client might need to implement a slightly different set of extensions than a mobile client.
 
 ----
@@ -263,6 +263,7 @@ Note: So as a client developer you either know if you implement one of the profi
 * XML/RDF vocabulary
 * [github.com/ewilderj/doap](https://github.com/ewilderj/doap)
 * Files for [poezio](https://lab.louiz.org/poezio/poezio/blob/master/data/doap.xml), Dino,  Movim
+* During Sprint in Lyon ([blog post](https://bouah.net/2019/07/new-sprint-new-goodies/#doap-description-of-a-project))
 
 Note: Or even better: You put all the extensions into a special XML file together with some additional information about your project. And then the xmpp.org website that lists different clients could automaticlly determine that.
 
@@ -288,14 +289,14 @@ Note: The vast majority of server software is 'compliant'. So this is more of a 
 * [XEP-0392: Consistent Color Generation](https://xmpp.org/extensions/xep-0392.html)
 
 Note:
-Recently there have been some attempts to unify the UX across different clients. This doesn’t mean having the same UI in every client but at least use some commen vocabulary. For example what to call a group chat or even what to call the Jabber ID or XMPP address.
-There is also a need XEP called consistent color generation which causes the same user to be displayed in the same color on different clients. For example my friend Peter has a red avatar on Conversations and also a red avatar on Dino.
+Recently there have been some attempts to unify the UX across different clients. This doesn’t mean having the same UI in every client but at least use some common vocabulary. For example what to call a group chat or even what to call the Jabber ID or XMPP address.
+There is also a neat XEP called consistent color generation which causes the same user to be displayed in the same color on different clients. For example my friend Peter has a red avatar on Conversations and also a red avatar on Dino.
 
 ----
 
 ### Growing the community
 
-Note: Growing the community twofold. On one hand we obviously want to attract more users but on the other hand we also desperatly need mores developers. A vast majority of developers only work part time on XMPP; and we need to componsate for that by getting more developers.
+Note: Growing the community twofold. On one hand we obviously want to attract more users but on the other hand we also desperately need more developers. A vast majority of developers only work part time on XMPP; and we need to componsate for that by getting more developers.
 
 ----
 
@@ -305,7 +306,7 @@ Note: Growing the community twofold. On one hand we obviously want to attract mo
 
 Note: Growing the user base is simple but not easy. We need to spread the word. Get media to talk about us. for example here is the graph of Quicksy downloads after it was mentioned in a German print magazine.
 
-This also ties back to the beginning of the talk and is I believe the reason we Conversations is significantly more succesful in Germany. Because we were able to get some news coverage here.
+This also ties back to the beginning of the talk and is I believe the reason why Conversations is significantly more succesful in Germany. Because we were able to get some news coverage here.
 
 ----
 
@@ -316,14 +317,14 @@ This also ties back to the beginning of the talk and is I believe the reason we 
 * Sprints
 * Compliance Suites
 
-Note: We have also recognized that we need to get more developer. Proper companys have dedicated people so called 'developer advocates' for that. To go to every conference in the world and tell everyone that their tool is the best. And also to write documentation. We have to do all that ourself.
+Note: We have also recognized that we need to get more developer. Proper companies have dedicated people so called 'developer advocates' for that. To go to every conference in the world and tell everyone that their tool is the best. And also to write documentation. We have to do all that ourselves.
 However we have identified the need for it and are trying to set some time aside to do all that.
 
 ---
 
 ## Commercial Usage
 
-Note: Talking about commercial usage of XMPP is always a bit challenging because people are often oddly secretive about things and I'm usually under an NDE for most of the time. So it's usually easier for me to talk about other peoples projects. However I still want to try to find some examples.
+Note: Talking about commercial usage of XMPP is always a bit challenging because people are often oddly secretive about things and I'm usually under an NDA for most of the time. So it's usually easier for me to talk about other peoples project’s. However I still want to try to find some examples.
 
 ----
 
@@ -338,7 +339,7 @@ Note: Talking about commercial usage of XMPP is always a bit challenging because
 Note: A funny example I learned about recently is that a fashion label was using it. Because apparently when you buy expensive fashion these days you are not doing it in a store or in an online store but on Instagram and Snapchat or what ever. And then they were using XMPP to funnel all that communication from different channels into their back end.
 
 Also NATO, and a lot of goverment agencies are using XMPP. Usually they use special clients from companies that specifically cater to that market. And those clients then have special features like marking a message as 'top secret' or 'only for Germany' and then they have special XMPP firewalls that sit in between the UK army and the German army for example and filter based on that criteria.
-But I've also know of at least intelligence agency that uses vanilla Conversations with vanilla ejabberd.
+But I've also know of at least an intelligence agency that uses vanilla Conversations with vanilla ejabberd.
 
 ----
 
@@ -364,7 +365,7 @@ Note:
 * Fairly active development. Two major releases and countless minor and bug fix releases in the last 12 months.
 * Last year the developer worked full time on that. Now he has a job where he is allowed to also work on Converse
 * Last year: OMEMO support / HTTP Upload
-* Now in latest version from this week it good stream managment support which means one can use the more efficiant WebSockets instead of BOSH.
+* Now in latest version from this week it good stream managment support which means one can use the more efficient WebSockets instead of BOSH.
 
 ----
 
@@ -373,7 +374,7 @@ Note:
 <img style="border: 0px; height: 450px; background-color: transparent;" src="images/froscon19/movim.png">
 
 Note:
-* More of Social Network with Chat capability
+* More of Social Network with Chat capabilities.
 * One if the first if not the first that support emoji reactions which is currently the new hotness in the XMPP community (but also more difficult to implement properly than one might think)
 * Interesting because we don’t have a lot of web clients
 * Requires PHP backend that proxies and caches things
@@ -388,7 +389,7 @@ Note:
 * Uses GTK and is platform independend on paper.
 * Got OMEMO and HTTP Upload about a year ago. Also has support for PGP (one of the few 'modern' clients that do)
 * Progress slow but steady. A google summer of code student is currently working on Jingle File Transfer support
-* One of the few good desktop clients, my dialy driver; No release yet which is supper annoying for people not comfortable compiling it themselves (epecially Mac OS and Windows users)
+* One of the few good desktop clients, my daily driver; No release yet which is supper annoying for people not comfortable compiling it themselves (especially Mac OS and Windows users)
 * Very clean UI; all the basic features so people flock to it
 
 ----
@@ -400,7 +401,7 @@ Note:
 Note:
 * Polar opposite to Dino. Has all XMPP features. All of them!
 * In parts cluttered UI; code base partially a mess; Pretty old client; Current maintainer is the third maintainer I believe
-* However maintainer is working on cleaning up the UI and the code base; it's actively being worked on. Very involved in the community and interested in supporting new things. Current mater branch for example has support for MUC search.
+* However maintainer is working on cleaning up the UI and the code base; it's actively being worked on. Very involved in the community and interested in supporting new things. Current master branch for example has support for MUC search.
 * I'm a bit afraid it might be difficult to shake of the preconception of 'cluttered UI' even if it will improve in the future.
 
 ----
@@ -436,7 +437,7 @@ Note:
 Note:
 * Interesting because usually Windows support is a second class citizen and this is a dedicated Windows client.
 * Uses the UWP toolkit which allows you to use the same client on every Windows platform including the Xbox and Windows phones; only that Microsoft has stopped making those.
-* Interesting because it already has ome basic OMEMO but no HTTP Upload, no Stream Managment no MAM
+* Interesting because it already has some basic OMEMO but no HTTP Upload, no Stream Managment no MAM
 * So very alpha
 
 ----
@@ -448,7 +449,7 @@ Note:
 Note:
 * Interesting concept. Uses Qt and KDE’s Kirigami to be truly platform independend.
 * Doesn’t really feel native on Android. For example file / image picker bundles file browser that can only read internal files. Doesn’t stay connected
-* Supports HTTP Upload. No Group Chats and OMEMO. Both of which are planned though
+* Supports HTTP Upload. No Group Chats nor OMEMO. Both of which are planned though.
 
 ----
 
@@ -490,9 +491,9 @@ Note:
 * VoIP
 * Massive refactor (AndroidX + Jetpack)
 * Rich messages
-  * Quotes
-  * Website previews
-  * Emoji Reactions
+  - Quotes
+  - Website previews
+  - Emoji Reactions
 * Image viewer
 
 Note: Funding secured for VoIP
@@ -504,9 +505,9 @@ Note: Funding secured for VoIP
 <img style="border: 0px; height: 450px; background-color: transparent;" src="images/froscon19/quicksy.png">
 
 Notes:
-* Spin-off of Conversations. Not a fork developed in the same source tree
+* Spin-off of Conversations. Not a fork, developed in the same source tree
 * Onboarding with phone number; automatically finds other Quicksy users based on phone numbers in your address book
-* Can also chat with regular XMPP users; Quicksy user can manually add XMPP Addresses
+* Can also chat with regular XMPP users; Quicksy users can manually add XMPP Addresses
 * **Or** other XMPP users can add Quicksy users by adding *phonenumber*@quicksy.im.
 * **Or** to make it even easier regular users can add their XMPP address and phone number combination into the so called *Quicksy Directory* and enable quicksy users to find them.
 * *Conversations for you Quicksy for your non-nerd friends*
@@ -528,7 +529,7 @@ Enter your number for free with code: FrOSCon
 * MacOS: BeagleIM
 
 Note:
-* Formerly known as Tigase Messenger. Could have been interesting because single brand ala 'Just download tigase messenger' instead of 'on iOS you have to download x on Android you have to download y'
+* Formerly known as Tigase Messenger. Could have been interesting because single brand à la 'Just download tigase messenger' instead of 'on iOS you have to download x on Android you have to download y'
 * Naming was too confusing because vastly different feature set
 * apparently very little incentive for feature parity because: 
 * Server manufacturer creating tech demos for potential customers
