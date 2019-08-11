@@ -448,7 +448,7 @@ Note:
 
 Note:
 * Interesting concept. Uses Qt and KDE’s Kirigami to be truly platform independend.
-* Doesn’t really feel native on Android. For example file / image picker bundles file browser that can only read internal files. Doesn’t stay connected
+* Doesn’t really feel native on Android. For example file / image picker bundles file browser that can only read internal files. Doesn’t stay connected. (**Update:** Developer says its possible to switch to the native file chooser; and staying in background is possible as well; We can expect this to be fixed in upcoming versions.)
 * Supports HTTP Upload. No Group Chats nor OMEMO. Both of which are planned though.
 
 ----
@@ -488,7 +488,7 @@ Note:
 
 ### Conversations - Roadmap to 3.0
 
-* VoIP
+* VoIP (Jingle)
 * Massive refactor (AndroidX + Jetpack)
 * Rich messages
   - Quotes
@@ -496,7 +496,7 @@ Note:
   - Emoji Reactions
 * Image viewer
 
-Note: Funding secured for VoIP
+Note: No timeline. Just plans for the future. However I have secured funding for for VoIP; and this is going to be the next thing I’ll be working on.
 
 ----
 
