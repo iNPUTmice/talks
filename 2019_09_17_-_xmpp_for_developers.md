@@ -140,9 +140,7 @@ ZGFuaWVsOnBhc3N3b3Jk
 <stream:stream …>
     <stream:features>
         <bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" />
-        <session xmlns="urn:ietf:params:xml:ns:xmpp-session">
-            <optional />
-        </session>
+        <session xmlns="urn:ietf:params:xml:ns:xmpp-session" />
         <sm xmlns="urn:xmpp:sm:3" />
         <csi xmlns="urn:xmpp:csi:0" />
         <ver xmlns="urn:xmpp:features:rosterver" />
@@ -153,7 +151,9 @@ ZGFuaWVsOnBhc3N3b3Jk
 
 ### Stanzas
 ```xml
-<message to='some@domain.tld' from='d@conversations.im' />
+<message to='some@domain.tld' from='d@conversations.im'>
+    <body>Hi</body>
+</message>
 ```
 
 ```xml
@@ -166,3 +166,183 @@ ZGFuaWVsOnBhc3N3b3Jk
 <iq to='somebody@domain.tld' from='d@conversations.im' type='get'>
     <payload xmlns='urn:exmaple:some-namespace'/>
 </iq>
+
+
+----
+
+#### Message
+
+* Do not expect a response
+* Can be put into offline queue
+* With or without body (human readable part)
+
+----
+
+#### Presence
+
+* Status (availability) information
+
+----
+
+#### IQ (Info/Query)
+
+* Expect a response
+* Types
+  * Request: `get` / `set`
+  * Response: `result` / `error`
+* Must contain `id`
+
+---
+
+### Addressing
+
+* Bare JID: `user@example.com`
+* Domain JID: `example.com`
+* Full JID: `user@example.com/desktop.Uf34`
+* None: implicit to & from own account
+
+---
+
+### Resource Binding
+
+###### 12.Client to Server
+```xml
+<iq id='one' type='set'>
+    <bind xmlns='urn:ietf:params:xml:ns:xmpp-bind'>
+        <resource>desktop.Uf34</resource>
+    </bind>
+</iq>
+```
+
+###### 13. Server to client
+```xml
+<iq id='one' type='result'>
+    <bind xmlns='urn:ietf:params:xml:ns:xmpp-bind'>
+        <jid>d@conversations.im/desktop.Uf34</jid>
+    </bind>
+</iq>
+```
+---
+
+### Sessions (Welcome to XMPP)
+
+* Part of RFC 3921 (XMPP: IM and Presence)
+* Not even mentioned in RFC 6120 & RFC 6121
+* Has been replaced by _intial presence_?
+* Old servers still require it
+
+----
+```xml
+<stream:features>
+    <session xmlns="urn:ietf:params:xml:ns:xmpp-session">
+        <optional />
+    </session>
+    …
+</stream:features>
+```
+
+###### 14. Client to server
+
+```xml
+<iq to='conversations.im'
+    type='set'
+    id='two'>
+  <session xmlns='urn:ietf:params:xml:ns:xmpp-session'/>
+</iq>
+```
+
+###### 15. Server to client
+```xml
+<iq to='d@conversations.im/desktop.Uf34' id='two' type='result' />
+```
+
+---
+
+### Initial Presence
+
+```xml
+<presence from='d@conversations.im/desktop.Uf34'>
+  <show>chat</show>
+  <status>Hey there. I’m using Conversations!</status>
+</presence>
+
+```
+* Presence transmitted to contacts
+* Contacts’ presences send to client
+* Start receiving messages
+
+---
+
+### Service Discovery (Requests)
+
+###### Client to server
+
+```xml
+<iq to='conversations.im' from='d@conversations.im/desktop.Uf34'
+        type='get' id='three'>
+    <query xmlns='http://jabber.org/protocol/disco#info' />
+</iq>
+```
+###### Client to server
+```xml
+<iq from='d@conversations.im/desktop.Uf34' type='get' id='four'>
+    <query xmlns='http://jabber.org/protocol/disco#info' />
+</iq>
+```
+
+----
+
+### Service Discovery (Responses)
+
+###### Server to client
+
+```xml
+<iq to='d@conversations.im/desktop.Uf34' from='conversations.im'
+        type='result' id='three'>
+    <query xmlns='http://jabber.org/protocol/disco#info'>
+        <feature var='urn:xmpp:blocking'/>
+    </query>
+</iq>
+```
+
+###### Server to client
+```xml
+<iq to='d@conversations.im/desktop.Uf34' from='d@conversations.im'
+        type='result' id='four'>
+    <query xmlns='http://jabber.org/protocol/disco#info'>
+        <feature var='urn:xmpp:mam:2' />
+        <feature var='urn:xmpp:carbons:2' />
+    </query>
+</iq>
+```
+
+---
+
+### Item Discovery (Request)
+
+###### Client to server
+```xml
+<iq to='conversations.im' from='d@conversations.im/desktop.Uf34'
+      type='set' id='five'>
+    <query xmlns='http://jabber.org/protocol/disco#items' />
+</iq>
+```
+
+----
+
+### Item Discovery (Response)
+
+###### Server to client
+```xml
+<iq to='d@conversations.im/desktop.Uf34' from='conversations.im'
+      type='result' id='five'>
+    <query xmlns='http://jabber.org/protocol/disco#items'>
+        <item jid='upload.conversations.im' name='HTTP Upload '/>
+        <item jid='muc.conversations.im' name='Group Chat' />
+    </query>
+</iq>
+```
+
+---
+
+### Service Discovery (subsequent requests)
