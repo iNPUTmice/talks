@@ -81,7 +81,7 @@ theme: league
 
 ###### 3. Client to server
 ```xml
-<starttls xmlns='urn:ietf:params:xml:ns:xmpp-tl'/>
+<starttls xmlns='urn:ietf:params:xml:ns:xmpp-tls'/>
 ```
 ###### 4. Server to client
 ```xml
@@ -117,7 +117,7 @@ TLS Handshake
 ###### 8. Client to server
 ```xml
 <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="PLAIN">
-ZGFuaWVsOnBhc3N3b3Jk
+    ZABzZWNyZXRwYXNzd29yZAAK
 </auth>
 ```
 
@@ -166,7 +166,7 @@ ZGFuaWVsOnBhc3N3b3Jk
 <iq to='somebody@domain.tld' from='d@conversations.im' type='get'>
     <payload xmlns='urn:exmaple:some-namespace'/>
 </iq>
-
+```
 
 ----
 
@@ -224,12 +224,14 @@ ZGFuaWVsOnBhc3N3b3Jk
 ```
 ---
 
-### Sessions (Welcome to XMPP)
+### Sessions (Welcome to XMPP ¹)
 
 * Part of RFC 3921 (XMPP: IM and Presence)
 * Not even mentioned in RFC 6120 & RFC 6121
 * Has been replaced by _intial presence_?
 * Old servers still require it
+
+<small>¹ All protocols really</small>
 
 ----
 ```xml
