@@ -39,6 +39,9 @@ theme: league
 * Wettbewerbsverzerrung
 * …
 
+Note: Apps werden aus den App Stores geworfen weil sie zum Beispiel zu Spenden aufgerufen haben; Das ist zum Beispiel Wireguard letzens passiert.
+
+
 ----
 
 ### Break Them Up!
@@ -145,6 +148,8 @@ theme: league
 * Selbstzerstörende Nachrichten
 * Nachrichten korrigieren
 
+Note: Nicht jeder Messenger wird immer jedes kleine feature unterstützen. Man braucht idealerweise also eine Möglichkeit herauszufinden ob die Gegenseite das unterstützt. Für sich genommen sind diese Features aber alle relativ trivial.
+
 ----
 
 ### Gruppenchats
@@ -188,6 +193,7 @@ theme: league
 * Was ist betroffen?
 
 Note: Sind Twitter DMs betroffen? Macht es Sinn einen Messenger der nur Firmenintern benutzt wird zu interop zu zwingen obwohl das in der Regel dann wahrscheinlich durch Firmen policy verhindert wird?
+Nicht mit Unternehmenschat dealen zu müssen hilft uns wahrscheinlich damit Threads nicht standardisieren zu müssen...
 
 ---
 
@@ -231,6 +237,17 @@ Note: Sind Twitter DMs betroffen? Macht es Sinn einen Messenger der nur Firmenin
 
 ----
 
+### Exkurs: XMPP
+
+* federated, anbieterunabhängiges Instant Messaging
+* offener IETF Standard
+* Erweiterbar
+* Feature discoverability 
+
+Note: Es geht mir nicht darum vorzuschlagen das wir jetzt alle XMPP benutzen. Wenn alle anderen sich gerne auf etwas einigen möchten was JSON über HTTPS nutzt dann ist das auch ok. Es geht mir nur darum die organisationsprozesse zu erklären.
+
+----
+
 ### XMPP Standards Foundation (XSF)
 
 * Offene Mailingliste
@@ -247,8 +264,7 @@ Note: Sind Twitter DMs betroffen? Macht es Sinn einen Messenger der nur Firmenin
 * Autor ändert XEP basierend auf Feedback
 * Stages: Experimental, Proposed, Draft, Final
 
-Notes: Bei der DIN heißt das Normenentwurf (Gelbdruck/Rotdruck) und Vornorm (Blaudruck)
-
+Notes: Bei der DIN heißt das Normenentwurf (Gelbdruck/Rotdruck) und Vornorm (Blaudruck). Bei der IETF laufen diese Sachen auch sehr änlich ab. Da die IETF breiter aufgestellt ist werden hier jedoch häufig Working Groups für spezielle Themen gebildet.
 ----
 
 ### XSF Struktur
